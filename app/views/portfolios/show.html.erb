@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @portfolio_item.main_image %>
 <h3><%= @portfolio_item.title %></h3>
 <p><%= @portfolio_item.subtitle %></p>
 <p><%= @portfolio_item.body %></p>
-<%= image_tag @portfolio_item.main_image %>
 
 <br>
 <%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %> |
