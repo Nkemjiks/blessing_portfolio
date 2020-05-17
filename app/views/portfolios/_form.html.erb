@@ -36,6 +36,13 @@
     <%= form.text_field :thumb_image %>
   </div>
 
+  <div class="field">
+    <%= form.fields_for :technologies do |tech_form| %>
+      <%= tech_form.label :name %>
+      <%= tech_form.text_field :name %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
