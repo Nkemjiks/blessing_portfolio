@@ -19,7 +19,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
 
     if @blog.save
-      redirect_to @blog, notice: "Blog was successfully created."
+      redirect_to @blog, notice: "Your blog is now live"
     else
       render :new
     end
@@ -40,7 +40,7 @@ class BlogsController < ApplicationController
 
   def toggle_status
     @blog.draft? ? @blog.published! : @blog.draft!
-    redirect_to blogs_url
+    redirect_to blogs_url, notice: "Post status has been updated."
   end
 
   private

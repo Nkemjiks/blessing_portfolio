@@ -1,5 +1,5 @@
 <h1>Homepage</h1>
-<p>Hi <%= current_user.first_name if user_signed_in? %>
+<p><%= "Hi #{current_user.first_name}" if user_signed_in? %>
 
 <h1>Blogs</h1>
 <%= @blogs.inspect %>
