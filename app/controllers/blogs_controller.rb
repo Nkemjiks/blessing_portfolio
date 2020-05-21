@@ -3,9 +3,11 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all.order("created_at")
+    @page_title = "Blogs"
   end
 
   def show
+    @page_title = @blog.title
   end
 
   def new
