@@ -14,20 +14,10 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <% if current_user.is_a? User %>
-      <%= link_to  "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Log in", new_user_session_path %><br />
-      <%= link_to "Sign up", new_user_registration_path %><br />
-    <% end %>
-
+    <%= login_helper %>
     <%= yield %>
-
     <%= render "shared/navbar", location: "bottom" %>
 
-    <% if session[:source] %>
-      <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
-
+    <%= source_helper("blog") %>
   </body>
 </html>
