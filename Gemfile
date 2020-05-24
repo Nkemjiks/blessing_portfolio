@@ -13,6 +13,7 @@ gem "jbuilder", "~> 2.7"
 gem "friendly_id", "~> 5.2.4"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "devise"
+gem "petergate", "~> 1.6", ">= 1.6.3"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
