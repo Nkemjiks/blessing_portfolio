@@ -119,8 +119,17 @@ body {
   text-align: left;
 }
 
+.auth-links {
+  margin-top: 15px;
+}
+
 .auth-links a {
   color: black;
-  margin-top: 15px;
   display: block;
+}
+
+.login > .card {
+  width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
 }
