@@ -43,7 +43,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55em;
+  max-width: 65em;
 }
 
 
@@ -107,4 +107,9 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+.lead {
+  font-size: 1.05rem;
+  font-weight: 300;
 }
