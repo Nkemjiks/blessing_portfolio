@@ -121,4 +121,6 @@ body {
 
 .auth-links a {
   color: black;
+  margin-top: 15px;
+  display: block;
 }
