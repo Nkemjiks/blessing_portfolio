@@ -4,7 +4,11 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: { except: [:destroy, :new, :edit, :create, :update, :toggle_status] }, site_admin: :all
 
   def index
-    @blogs = Blog.all.order("created_at")
+    if logged_in?(:site_admin)
+      @blogs = Blog.page(params[:page]).per(5).order("created_at")
+    else
+      @blogs = Blog.published.page(params[:page]).per(5).order("created_at")
+    end
     @page_title = "Blogs"
   end
 

@@ -1,5 +1,6 @@
 /*
   *= require bootstrap
+  *= require @fortawesome/fontawesome-free
 */
 
 /*
@@ -182,4 +183,9 @@ h6, .h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+.social-links svg {
+  width: 1.5em !important;
+  height: 1.5em;
 }
