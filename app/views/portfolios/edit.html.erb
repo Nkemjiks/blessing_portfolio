@@ -1,6 +1,11 @@
-<h1>Editing Portfolio</h1>
 
-<%= render 'form', portfolio_item: @portfolio_item %>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <h2>Editing Portfolio</h2>
+    <%= render 'form', portfolio_item: @portfolio_item %>
 
-<%= link_to 'Show', @portfolio_item %> |
-<%= link_to 'Back', portfolios_path %>
+    <%= link_to 'Show', @portfolio_item %> |
+    <%= link_to 'Back', portfolios_path %>
+  </div>
+</div>
+

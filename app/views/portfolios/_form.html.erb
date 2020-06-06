@@ -10,40 +10,50 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="field form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+      <div class="field form-group">
+        <%= form.label :subtitle %>
+        <%= form.text_field :subtitle, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :main_image %>
+        <%= form.text_field :main_image, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :thumb_image %>
+        <%= form.text_field :thumb_image, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="field form-group">
+        <%= form.label :body %>
+        <%= form.text_area :body, class: "form-control", rows: 15 %>
+      </div>
+    </div>
+
+    <hr>
+    <div class="col-md-12">
+      <h2>Technologies used</h2>
+      <div class="field form-group">
+        <%= form.fields_for :technologies do |tech_form| %>
+          <%= tech_form.label :name %>
+          <%= tech_form.text_field :name, class: "form-control" %>
+        <% end %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit class: "btn btn-primary btn-block" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <div class="field">
-    <%= form.label :main_image %>
-    <%= form.text_field :main_image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :thumb_image %>
-    <%= form.text_field :thumb_image %>
-  </div>
-
-  <div class="field">
-    <%= form.fields_for :technologies do |tech_form| %>
-      <%= tech_form.label :name %>
-      <%= tech_form.text_field :name %>
-    <% end %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
