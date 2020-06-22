@@ -5,6 +5,7 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image
   scope :angular_portfolio_item, -> { where(:subtitle => "Angular") }
+  scope :by_position, -> { self.order("position asc") }
 
   after_initialize :set_defaults
 
