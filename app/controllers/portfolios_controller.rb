@@ -29,6 +29,14 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def sort
+    params[:order].each do |portfolio|
+      Portfolio.find(portfolio[:id]).update(position: portfolio[:position])
+    end
+
+    head :ok
+  end
+
   def update
     if @portfolio_item.update(portfolio_item_params)
       redirect_to portfolios_url, notice: "Portfolio was successfully updated."
