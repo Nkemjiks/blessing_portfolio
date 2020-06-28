@@ -149,8 +149,25 @@ body {
   justify-content: center;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-text {
+  font-size: 2rem;
+}
 .about-me .description > p {
   text-align: justify;
+}
+
+.about-me img {
+  border-radius: 10px;
+}
+
+.footer-text {
+  color: white;
 }
 
 #background {
@@ -164,6 +181,6 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('hd-bg.jpg') no-repeat;
+  background: image-url('laptop-bg.jpg') no-repeat;
   background-size: cover;
 }
