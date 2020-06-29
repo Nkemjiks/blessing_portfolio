@@ -15,6 +15,10 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "devise"
 gem "petergate", "~> 1.6", ">= 1.6.3"
 gem "kaminari"
+gem "carrierwave", "~> 2.1"
+gem "carrierwave-aws", "~> 1.0"
+gem "mini_magick", "~> 4.10", ">= 4.10.1"
+gem "dotenv-rails", "~> 2.7", ">= 2.7.5"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
