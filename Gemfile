@@ -18,9 +18,9 @@ gem "kaminari"
 gem "carrierwave", "~> 2.1"
 gem "carrierwave-aws", "~> 1.0"
 gem "mini_magick", "~> 4.10", ">= 4.10.1"
-gem "dotenv-rails", "~> 2.7", ">= 2.7.5"
 
 group :development, :test do
+  gem "dotenv-rails", "~> 2.7", ">= 2.7.5"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
 
