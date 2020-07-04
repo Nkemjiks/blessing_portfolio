@@ -18,6 +18,7 @@ gem "kaminari"
 gem "carrierwave", "~> 2.1"
 gem "carrierwave-aws", "~> 1.0"
 gem "mini_magick", "~> 4.10", ">= 4.10.1"
+gem "cocoon"
 
 group :development, :test do
   gem "dotenv-rails", "~> 2.7", ">= 2.7.5"
